@@ -385,27 +385,68 @@ namespace Laba_3_1_8
 
 
             //Индивидуальное задание №1
-            int N = 7;
-            double[,] array = new double[N, N];
+            /*int N = 9;
+            int[,] array = new int[N, N];
             Random rand = new Random();
             for (int i = 0; i < N; i++)
+            {
                 for (int j = 0; j < N; j++)
+                {
                     array[i, j] = rand.Next(0, 10);
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < N; j++)
                     Console.Write(array[i, j] + " ");
+                }
                 Console.WriteLine();
             }
-            Console.WriteLine();
 
-            for (int j = 0; j < N; j++)
+            for (int i = 0; i < 9; i++)
             {
-                for (int i = N - 1; i >= 0; i--)
-
-                    Console.Write(array[i, j] + " ");
-                Console.WriteLine();
+                int t = array[i, i];
+                array[i, i] = array[i,8- i];
+                array[i, 8-i] = t;
             }
+
+            int Num = 1;
+            Console.WriteLine("\nРешение:");
+            foreach (int b in array)
+            {
+                if (Num == 9)
+                {
+                    Console.Write($"{b}\n");
+                    Num = 0;
+                }
+                else
+                {
+                    Console.Write(b + " ");
+                }
+                Num++;
+            }*/
+    
+       
+            //Индивидуальное задание 2
+            /*Console.WriteLine("Введите колличество элементов массива:");
+            int elements = int.Parse(Console.ReadLine());
+            int[] array = new int[elements];
+            Random rnd = new Random();
+            for (int i = 0; i < elements; i++)
+            {
+                array[i] = rnd.Next(0, 100);
+                Console.Write("{0} ", array[i]);
+            }
+            int count = 0;
+            for (int k = 0; k < elements - 1; k++)
+            {
+                if (array[k] < array[k + 1]) { 
+                count++; } 
+
+            }
+            if ( count != 0 )
+            {
+                Console.WriteLine("\nTrue");
+            }
+            else
+            {
+                Console.WriteLine("\nFalse");
+            }*/
 
         }
     }
